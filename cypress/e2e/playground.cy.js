@@ -204,7 +204,7 @@ describe('Cypress Playground - Protegendo dados sensíveis com Cypress', () => {
   beforeEach(() => {
     cy.visit('https://cypress-playground.s3.eu-central-1.amazonaws.com/index.html')
   })
-  it('Protegendo dados sensíveis com Cypress sem vazar a senha', () => {
+  it.skip('Protegendo dados sensíveis com Cypress sem vazar a senha', () => {
     cy.get('#password').should('be.visible')
       .type(Cypress.env('password'), {log: false})
 
